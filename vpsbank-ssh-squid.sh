@@ -1,10 +1,11 @@
 #!/bin/bash
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
 tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
-echo "● Instalar e configurar o proxy squid nas portas 80, 3128, 8080 e 8000" ; echo "  para permitir conexões SSH para este servidor"
-echo "● Configurar o OpenSSH Dropbear para rodar nas portas 22 e 143 110 109"
+echo "● ติดตั้ง ปลาหมึก ไห้ทำงานบน พอร์ต squid nas portas 80, 3128, 8080 e 8000" ; echo "  para permitir conexões SSH para este servidor"
+echo "● ตั้งค่าบนพอร์ต o SSH และ Dropbear para rodar nas portas 22 e 143 110 109"
 echo "● Instalar um conjunto de scripts como comandos do sistema para o gerenciamento de usuários" ; tput sgr0
-echo ""
+echo "● ติดตั้ง ชุดของสคริปต์ เป็นคำสั่ง ระบบสำหรับการจัดการผู้ใช้ เย็ดเข้ "
+echoecho ""
 tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
 tput setaf 2 ; tput bold ; echo "	Termos de Uso" ; tput sgr0
 echo ""
@@ -183,11 +184,12 @@ then
 	fi
 fi
 echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8000" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH dropbear rodando nas portas 22 e 143,109 110" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid ติดตั้ง ให้ ใช้งาน ใน พอร์ต: 80, 3128, 8080 e 8000" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "SSH dropbear rodando nas portas 22 e 143,109 110" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Scripts para gerenciamento de usuário instalados" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Leia a documentação para evitar dúvidas e problemas!" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Para ver os comandos disponíveis use o comando: ajuda" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "ParaPara ver os comandos disponíveis use o comando: ajuda" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "เสร็จแล้ว ไอ้เหี้ย ไอ้สัส เลว"
 echo ""
 if [[ "$optiondb" = '2' ]]; then
 	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > /root/usuarios.db
